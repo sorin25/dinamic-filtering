@@ -1,0 +1,4 @@
+<table>
+  <tr><td>Select All</td></tr>
+  <tr *ngFor="let prop of values$ | async"><td><input type="checkbox" id={{prop}} (change)="changed($event)"><label for={{prop}}>{{prop}}</label></td></tr>
+</table>
