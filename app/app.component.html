@@ -1,0 +1,13 @@
+<table border=1><tr>
+  <td valign=top *ngFor="let f of filters"><app-filter  [property]=f></app-filter></td>
+  </tr>
+</table>
+
+<table border=1>
+  <tr><th>Name</th><th>Platform</th><th>Geo</th></tr>
+  <tr *ngFor="let customer of filteredCustomers|async">
+    <td>{{customer.name}}</td>
+    <td>{{customer.platform}}</td>
+    <td>{{customer.geo}}</td>
+  </tr>
+</table>
